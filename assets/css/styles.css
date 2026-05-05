@@ -1,58 +1,138 @@
-/* navbar*/
-.navbar .active {
-    font-weight: bold;
-}
+ /* Apply the Handlee font to all headings */
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+   font-family: 'Handlee', cursive;
+ }
 
-/***header section***/
-/*hero section*/
+
+
+
+ /***header section***/
+
+ 
+ /*hero section*/
  .hero-section {
-    background-image: url('../images/hero.png');
-    background-size: cover;
-    background-position: 50% 100%; /* Adjust as needed to focus on the desired part of the image */
-    background-repeat: no-repeat;
-    min-height: 60vh; /* Adjust as needed - could use 75vh, etc. */
-    width: 100%;
-    position: relative;
-  }
-
-  
-  /* Optional overlay for better text contrast */
-  .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
-  }
-  
-  .hero-section .container {
-    position: relative; /* Ensures content stays above the overlay */
-  }
-
-  /* Hero h1 text styling */
-  .hero-section h1 {
-  font-family: 'Handlee', cursive;
-  color: #FFEBD4;
-}
-
-.btn {
-    color: #3B2F2F;
-}
+   background-image: url('../images/hero.png');
+   background-size: cover;
+   background-position: 50% 100%;
+   /* Adjust as needed to focus on the desired part of the image */
+   background-repeat: no-repeat;
+   min-height: 60vh;
+   /* Adjust as needed - could use 75vh, etc. */
+   width: 100%;
+   position: relative;
+ }
 
 
+ /* Optional overlay for better text contrast */
+ .hero-section::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   /* Adjust opacity as needed */
+ }
+
+ .hero-section .container {
+   position: relative;
+   /* Ensures content stays above the overlay */
+ }
+
+ /* Hero h1 text styling */
+ .hero-section h1 {
+   font-family: 'Handlee', cursive;
+   color: #FFEBD4;
+ }
+
+ .btn {
+   color: #3B2F2F;
+ }
+
+/* navbar*/
+ /* Make the navbar sticky */
+ .navbar {
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+ }
 
 
 
 
-/************************************************************************************************************************
-***************/@media (max-width: 768px) {
-  .hero-section {
-    min-height: 75vh;
-  }
-  
-  .hero-section h1 {
-    font-size: calc(1.5rem + 3vw);
-  }
-}
+
+ body {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+ }
+
+ /* 
+        This CSS rule adds padding to the left and right of the body and main elements. 
+        This ensures that the content is not right up against the viewport on small screens.
+        */
+ main {
+   margin: 2rem 0;
+ }
+
+ /* Style the footer */
+ .footer {
+   margin-top: auto;
+   background-color: #6F4E37;
+   color: #FFEBD4;
+ }
+
+ .footer i{
+   color: #FFEBD4;
+ }
+
+ /* Highlight the active nav link */
+ .nav-item.active .nav-link {
+   color: #000000;
+   /* Change to the color you want */
+   font-weight: bolder;
+   /* Makes the text bold */
+ }
+
+ /* Style the service cards */
+ .card {
+   border: none;
+ }
+
+ .card-img-top {
+   height: 200px;
+   object-fit: cover;
+ }
+
+ /* Set the size of the testimonial images */
+ .testimonial-image {
+   width: 100px;
+   height: 100px;
+ }
+
+ /* Applies rounded corners to images with the 'rounded-image' class. Adjust the border-radius value to control the roundness. */
+ .rounded-image {
+   border-radius: 15px;
+   /* Adjust the px value as needed */
+ }
+
+
+
+
+ /************************************************************************************************************************
+***************/
+ @media (max-width: 768px) {
+   .hero-section {
+     min-height: 75vh;
+   }
+
+   .hero-section h1 {
+     font-size: calc(1.5rem + 3vw);
+   }
+ }
